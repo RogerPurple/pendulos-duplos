@@ -5,7 +5,6 @@ class Vector():
     def __init__(self, _x: int, _y: int) -> None:
         self.x = _x
         self.y = _y
-        self.Zero = Vector(0, 0)
     
     # Situação de divisão
     def __add__(self, other):
@@ -82,6 +81,9 @@ class Vector():
             return Vector(0, 0)
 
         return Vector(v_x_normalized, v_y_normalized)
+    
+    def tupla(self):
+        return (self.x, self.y)
     
     
 

@@ -1,16 +1,29 @@
 import pygame
+from objets import Simple_Pendulum
+from utils import Vector
 
 pygame.init()
 
+screen_width = 1280 
+screen_heith = 720
+screen_center = Vector(screen_width/2, screen_heith/2)
 screen = pygame.display.set_mode((1280,720))
 
 clock = pygame.time.Clock()
 
+# 1 = simple; 2 extended
+mode = 2
+
+# inicializando classe
+frodo = Simple_Pendulum(screen_center, 300, True)
+
+
+
 def logical_update():
-    pass
+    frodo.update()
 
 def render_graphics():
-    pass
+    frodo.render_graphs(screen)
 
 
 while True:
